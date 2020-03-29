@@ -7,7 +7,7 @@ module.exports = {
     const ong = await connect('ongs')
       .where('id', id)
       .select('name')
-      .fisrt()
+      .first()
 
     if (!ong) {
       return res.status(400).json({ error: "No ONG found with this ID" })
